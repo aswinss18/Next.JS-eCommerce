@@ -6,6 +6,7 @@ export async function PUT(request: NextRequest, URLParams: any) {
   try {
     const body = await request.json();
     const id = URLParams.params.id;
+
     const { name, price, category } = body;
 
     await connectMongoDB();
