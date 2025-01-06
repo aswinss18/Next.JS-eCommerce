@@ -1,5 +1,6 @@
 "use client";
 
+import Popup from "@/components/admin-panel/Popup";
 import ProductRow from "@/components/admin-panel/ProductRow";
 import { setLoading } from "@/redux/features/loadingSlice";
 import { useAppDispatch } from "@/redux/hook";
@@ -30,7 +31,7 @@ export default function page() {
       .catch((err) => console.log(err))
       .finally(() => dispatch(setLoading(false)));
   }, [updateTable]);
-
+  console.log(products);
   return (
     <div>
       <div className="bg-white h-[calc(100vh-96px)] rounded-lg p-4">
@@ -60,9 +61,9 @@ export default function page() {
           </table>
         </div>
       </div>
-      {/* {openPopup && (
+      {openPopup && (
         <Popup setOpenPopup={setOpenPopup} setUpdateTable={setUpdateTable} />
-      )} */}
+      )}
     </div>
   );
 }
