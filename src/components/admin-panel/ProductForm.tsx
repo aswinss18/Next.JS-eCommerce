@@ -46,5 +46,5 @@ export default function ProductForm() {
       .finally(() => dispatch(setLoading(false)));
   };
 
-  return <div>ProductForm</div>;
+  return <>ProductForm</>;
 }
