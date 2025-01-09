@@ -76,6 +76,48 @@ export default function ProductForm() {
           alert(`ERROR! ${error.message}`);
         }}
       />
+      <div>
+        <label htmlFor="name" className="block ml-1 ">
+          Product Name
+        </label>
+        <input
+          name="name"
+          type="text"
+          className="bg-gray-300 w-full px-4 py-2 border outline-pink rounded-md"
+          value={payload.name}
+          onChange={(e) => setPayload({ ...payload, name: e.target.value })}
+          required
+        />
+      </div>{" "}
+      <div>
+        <label htmlFor="category" className="block ml-1 ">
+          Product Category
+        </label>
+        <input
+          name="category"
+          type="text"
+          className="bg-gray-300 w-full px-4 py-2 border outline-pink rounded-md"
+          value={payload.category}
+          onChange={(e) => setPayload({ ...payload, category: e.target.value })}
+          required
+        />
+      </div>{" "}
+      <div>
+        <label htmlFor="price" className="block ml-1 ">
+          Product Price
+        </label>
+        <input
+          type="text"
+          name="price"
+          className="bg-gray-300 w-full px-4 py-2 border outline-pink rounded-md"
+          value={payload.price}
+          onChange={(e) => setPayload({ ...payload, price: e.target.value })}
+          required
+        />
+      </div>
+      <div className="flex justify-end ">
+        <button className="bg-pink text-white px-8 py-2 rounded-md">Add</button>
+      </div>
     </form>
   );
 }
