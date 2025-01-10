@@ -1,6 +1,7 @@
 "use client";
 
 import Cart from "@/components/front-end/Cart";
+import Hero from "@/components/front-end/Hero";
 import Navbar from "@/components/front-end/Navbar";
 import { useState } from "react";
 
@@ -11,6 +12,7 @@ export default function Home() {
     <main>
       <Navbar setShowCart={setShowCart} />
       {showCart && <Cart setShowCart={setShowCart} />}
+      <Hero />
     </main>
   );
 }
